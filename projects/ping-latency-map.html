@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://aaronstanek.com/static-web-content/fonts/noto-sans.css" />
+		<meta name="language" content="en" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.xlu3M2Mu.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/6.DwQoxMAX.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.PCdzgXAJ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.BcS3EpA_.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.CA6UzYnQ.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.B7rmYVgY.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.BA4rS3fn.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.zAV_7yEO.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.D85If5M2.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.UXD9_3C6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.D6YF6ztN.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/head.3_Uw6x_c.js"><title>Ping Latency Map</title><!-- HEAD_svelte-1rye2e1_START --><link rel="canonical" href="https://aaronstanek.com/projects/ping-latency-map"><meta name="description" content="Discover how quickly digital messages travel around the world with WonderNetwork's interactive ping map. Choose cities, set time thresholds, and see which cities respond the fastest. Explore now!"><script type="application/ld+json" data-svelte-h="svelte-1facqi3"></script><!-- HEAD_svelte-1rye2e1_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <div class="golden svelte-qw2ub0"><a href="/" data-svelte-h="svelte-186pi5r">&lt; Home</a>  <h1 class="text-center text-3xl" data-svelte-h="svelte-1a5qbm7">Ping Latency Map</h1> <p data-svelte-h="svelte-1qgpi6e"><br>
+
+	Ever wondered how long it takes for a digital message to zip around the globe? This map shows you
+	exactly that!
+
+	<br><br> <a href="https://wondernetwork.com/pings">WonderNetwork</a> timed how long it takes for computers
+	in different cities to send each other a quick hello (called a &quot;ping&quot; in computer circles). The
+	blue dots on the map represent cities with the fastest replies to a sample ping, while the red
+	dots show cities with slower replies.
+
+	<br><br>
+
+	You can choose which cities to start from and set a time threshold using the controls below. If
+	the ping time between any of your source cities and a particular city on the map is less than the
+	time threshold, that city is marked with a blue dot. If the ping time is greater than the time
+	threshold, that city is marked with a red dot.
+
+	<br><br>
+
+	Let&#39;s see how far your digital hellos can travel!
+
+	<br><br></p> <canvas width="800px" height="525px" class="svelte-in6u4z" data-svelte-h="svelte-1uujv9l"></canvas>  <br> <button class="falselink" data-svelte-h="svelte-10jjm7c">See available cities</button> <p data-svelte-h="svelte-1nlwrvi"><br><br><br>
+	This map is intended only as an approximate reference. The information on the map including, but not
+	limited to, the ping times between specific cities, the locations of cities, and the locations of national
+	borders may differ from the real world.
+	<br><br>
+	The map data for this project is used under license from Wikimedia.
+	<a href="https://commons.wikimedia.org/wiki/File:Mercator_Projection.svg">Source</a> <br><br>
+	The ping data for this project is used under license from WonderNetwork.
+	<a href="https://wonderproxy.com/blog/a-day-in-the-life-of-the-internet/">Source</a></p> <div class="spacer svelte-1ekoa5l"></div> <div class="bottom svelte-1ekoa5l"></div> <div class="text-center text-sm hide svelte-1ekoa5l">©2024 Aaron Stanek
+</div> </div> 
+			
+			<script>
+				{
+					__sveltekit_o3jsbg = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.PCdzgXAJ.js"),
+						import("../_app/immutable/entry/app.B7rmYVgY.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
