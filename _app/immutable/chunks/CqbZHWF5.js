@@ -1,0 +1,1 @@
+import{a as o,t as v}from"./IJMoEVRx.js";import{c as s,r as a}from"./DVmdCokJ.js";import{s as p}from"./DLg2SwNZ.js";var c=v('<div class="micro svelte-x9pcw5"><div class="shift svelte-x9pcw5"><!></div></div>');function f(e,t){var i=c(),r=s(i),d=s(r);p(d,()=>t.children),a(r),a(i),o(e,i)}export{f as H};

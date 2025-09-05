@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://aaronstanek.com/static-web-content/fonts/noto-sans.css" />
+		<meta name="language" content="en" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.BDHeZZF8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/10.Jk7saOLy.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/anchor.THenw_BX.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/compile.Cl-rEHcx.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/link-button.CtPRkdqd.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/hidden.Ca8PLjKJ.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/card.B5P20DnV.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.Cv-fELuH.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/URacGDI0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/nV-4aG2w.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DVmdCokJ.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.JsmOCrgd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/D1rJHNN0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/IJMoEVRx.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CJVv8vLi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/B5Nunh1s.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.DIJfgfhW.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DLg2SwNZ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CqQZoR6b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DrOXcJQ-.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/10.B9d3oQ3T.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Dp8kRQl_.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DOQqt08K.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CDgYgN1L.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C2YnBynH.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/D0xhmZqL.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/nyYEL0NA.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Gc-VDlzX.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BDMEyPIU.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CVbmncBi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/W9vy9Tiv.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CqbZHWF5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CQecHAK4.js"><!--[--><!--[--><link rel="canonical" href="https://aaronstanek.com/projects/ping-latency-map"><!--]--> <!--[--><!--]--> <!--[--><meta name="description" content="Visualize ping times around the world. Choose cities, set ping latency thresholds, and see which cities respond the fastest."><!--]--> <script type="application/ld+json"></script><!--]--><title>Ping Latency Map</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><div class="flex flex-col h-screen justify-between"><div><div class="flex justify-between navbar min-[480px]:sticky min-[480px]:top-0  svelte-1y50ho1"><!--[--><div class="link-like svelte-1y50ho1">Aaron Stanek</div><!--]--> <div class="flex flex-wrap justify-between"><a class="hide-on-modile svelte-1y50ho1" target="_top" href="https://github.com/aaronstanek">GitHub</a> <a class="hide-on-modile svelte-1y50ho1" target="_top" href="https://www.linkedin.com/in/amstanek/">LinkedIn</a> <a target="_top" href="/contact" class="svelte-1y50ho1">Contact</a></div></div><!----> <div class="golden svelte-xtstca"><!----><!----> <h1 class="text-center">Ping Latency Map</h1> <div class="micro svelte-x9pcw5"><div class="shift svelte-x9pcw5"><h2>The App</h2><!----></div></div><!----> <div class="flex justify-center mt-3"><a href="#contents" target="_top" class="link"><!---->Jump to Table of Contents<!----></a><!----></div> <a id="how-to" class="svelte-a4pcdw"><div class="mt-6 mb-6">The interactive map below shows ping latency between major cities worldwide. You can customize
+		the map by selecting source cities and setting a ping latency threshold. If a city has a ping
+		latency with any one of the source cities that is less than the ping latency threshold, then
+		that city is marked in blue. Otherwise, if the ping latency between a city and all the source
+		cities is greater than the threshold, the city is marked in red.</div><!----></a><!----> <a id="map" class="svelte-a4pcdw"><canvas width="800px" height="525px" class="svelte-15ckied"></canvas><!----></a><!----> <!--[!--><!--]--> <br> <!--[--><button type="button" class="link svelte-10z98yb"><!---->See available cities<!----></button><!--]--> <div class="micro svelte-x9pcw5"><div class="shift svelte-x9pcw5"><h2>About this App</h2><!----></div></div><!----> <a id="contents" class="svelte-a4pcdw"><h3 class="mt-6">Table of Contents</h3><!----></a><!----> <div class="mt-1">1. <a href="#how-to" target="_top" class="link"><!---->How to Use This Tool<!----></a><!----><br> 2. <a href="#map" target="_top" class="link"><!---->The Map<!----></a><!----><br> 3. <a href="#understanding" target="_top" class="link"><!---->Understanding Ping Latency<!----></a><!----><br> 4. <a href="#impact" target="_top" class="link"><!---->The Impact of Latency on User Experience<!----></a><!----><br> 5. <a href="#disclaimer" target="_top" class="link"><!---->Disclaimer<!----></a><!----><br> 6. <a href="#credits" target="_top" class="link"><!---->Credits<!----></a><!----><br> 7. <a href="#source-code" target="_top" class="link"><!---->Source Code<!----></a><!----><br> 8. <a href="#bibliography" target="_top" class="link"><!---->Bibliography<!----></a><!----></div> <a id="understanding" class="svelte-a4pcdw"><h3 class="mt-6">Understanding Ping Latency</h3><!----></a><!----> <div class="mt-6">Ping latency measures the time it takes to send a piece of information to a computer on the
+	internet and to receive a response back from that computer.</div> <div class="mt-6">Ping latency is roughly correlated with the physical distance between the sender and receiver of
+	the ping. As a sense of scale, ping latency is usually measured in milliseconds (ms). A ping
+	between two computers in the same metro area takes about 1ms. A ping between two computers in the
+	same part of a continent typically takes about 20ms; for example, between New York and Chicago, or
+	between London and Berlin. A ping between computers on opposite sides of the planet takes about
+	300ms.<sup>[<!--[--><!--[!--><!--]--><button type="button" class="link svelte-10z98yb"><!---->8<!----></button><!----><!--]-->]</sup><!----></div> <a id="impact" class="svelte-a4pcdw"><h3 class="mt-6 mb-6">The Impact of Latency on User Experience</h3><!----></a><!----> <div class="mt-6">High ping latency translates to slow-loading websites and sluggish responses. This directly
+	affects user satisfaction. Even slight increases in ping latency can significantly hurt website
+	performance. The probability of a bounce increases 32% as page load time goes from 1 second to 3
+	seconds.<sup>[<!--[--><!--[!--><!--]--><button type="button" class="link svelte-10z98yb"><!---->3<!----></button><!----><!--]-->]</sup><!----> 53% of visits are abandoned if a mobile site takes longer
+	than 3 seconds to load.<sup>[<!--[--><!--[!--><!--]--><button type="button" class="link svelte-10z98yb"><!---->2<!----></button><!----><!--[-->,<!--]--><button type="button" class="link svelte-10z98yb"><!---->4<!----></button><!----><!--]-->]</sup><!----></div> <div class="mt-6">So, how much ping latency is acceptable for a modern website? There is no solid number, but
+	generally aiming for a 50ms ping latency between a user's city and a webserver's city is a good
+	benchmark. Taking this 50ms and adding another 50ms for the user's device to route through the
+	local ISP and for the webserver to process the request gives a 100ms delay overall between the
+	time a user clicks a button, and the time that the webpage responds.<sup>[<!--[--><!--[!--><!--]--><button type="button" class="link svelte-10z98yb"><!---->6<!----></button><!----><!--]-->]</sup><!----> 100ms is the longest that a computer can take to respond where the user perceives the response to
+	be instantaneous.<sup>[<!--[--><!--[!--><!--]--><button type="button" class="link svelte-10z98yb"><!---->5<!----></button><!----><!--]-->]</sup><!----></div> <a id="disclaimer" class="svelte-a4pcdw"><h3 class="mt-6">Disclaimer</h3><!----></a><!----> <div class="mt-6">This map is intended only as an approximate reference. The information on the map including, but
+	not limited to, the ping latencies between specific cities, the locations of cities, and the
+	locations of national borders may differ from the real world.</div> <a id="credits" class="svelte-a4pcdw"><h3 class="mt-6">Credits</h3><!----></a><!----> <div class="mt-6">The map data<sup>[<!--[--><!--[!--><!--]--><button type="button" class="link svelte-10z98yb"><!---->1<!----></button><!----><!--]-->]</sup><!----> for this project is used under license from Wikimedia.</div> <div class="mt-6">The ping data<sup>[<!--[--><!--[!--><!--]--><button type="button" class="link svelte-10z98yb"><!---->7<!----></button><!----><!--]-->]</sup><!----> for this project is used under license
+	from WonderNetwork.</div> <a id="source-code" class="svelte-a4pcdw"><h3 class="mt-6">Source Code</h3><!----></a><!----> <div class="mt-6">The source code for this project is <a href="https://github.com/aaronstanek/ping-latency-map" target="_top" class="link"><!---->available on GitHub<!----></a><!---->.</div> <a id="bibliography" class="svelte-a4pcdw"><h3 class="mt-6 mb-6">Bibliography</h3><!----></a><!----> <div class="bibliography svelte-57ye03"><!--[--><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-1" class="svelte-a4pcdw"><!---->1.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->Bosanko, Geordie, <!--]--><!--[--><a href="https://commons.wikimedia.org/wiki/File:Mercator_Projection.svg" target="_top" class="link"><!---->Mercator Projection.svg<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 30 Apr 2024<!--]-->.</div><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-2" class="svelte-a4pcdw"><!---->2.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->Google, <!--]--><!--[--><a href="https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-site-load-time-statistics/" target="_top" class="link"><!---->Mobile site load time statistics<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 14 Aug 2024<!--]-->.</div><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-3" class="svelte-a4pcdw"><!---->3.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->Google, <!--]--><!--[--><a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/page-load-time-statistics/" target="_top" class="link"><!---->Page load time statistics<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 14 Aug 2024<!--]-->.</div><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-4" class="svelte-a4pcdw"><!---->4.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->Google, <!--]--><!--[--><a href="https://blog.google/products/adsense/the-ultimate-mobile-page-speed-infographic/" target="_top" class="link"><!---->The ultimate mobile page speed infographic<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 14 Aug 2024<!--]-->.</div><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-5" class="svelte-a4pcdw"><!---->5.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->Nielsen, Jakob, <!--]--><!--[--><a href="https://www.nngroup.com/articles/response-times-3-important-limits/" target="_top" class="link"><!---->Response Times: The 3 Important Limits<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 14 Aug 2024<!--]-->.</div><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-6" class="svelte-a4pcdw"><!---->6.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->Pingman Tools, <!--]--><!--[--><a href="https://www.pingplotter.com/wisdom/article/is-my-connection-good/" target="_top" class="link"><!---->What Are Good Latency &amp; Ping Speeds?<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 14 Aug 2024<!--]-->.</div><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-7" class="svelte-a4pcdw"><!---->7.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->Reinheimer, Paul, <!--]--><!--[--><a href="https://wonderproxy.com/blog/a-day-in-the-life-of-the-internet/" target="_top" class="link"><!---->A day in the life of the Internet<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 30 Apr 2024<!--]-->.</div><div class="bib-item bib-item-left  svelte-57ye03"><a id="bibliography-index-8" class="svelte-a4pcdw"><!---->8.<!----></a><!----></div> <div class="bib-item bib-item-right  svelte-57ye03"><!--[-->WonderNetwork, <!--]--><!--[--><a href="https://wondernetwork.com/pings" target="_top" class="link"><!---->Global Ping Statistics<!----></a><!--]--><!--[!--><!--]--><!--[-->, Accessed: 30 Apr 2024<!--]-->.</div><!--]--></div><!----><!----><!----><!----></div></div> <div class="text-center copyright svelte-bex1d0">© Aaron Stanek</div><!----></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1lryntf = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.Cv-fELuH.js"),
+						import("../_app/immutable/entry/app.JsmOCrgd.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 10],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

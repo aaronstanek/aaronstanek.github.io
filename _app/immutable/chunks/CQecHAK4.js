@@ -1,0 +1,1 @@
+import{a as t,t as d}from"./IJMoEVRx.js";import{c as e,r as i}from"./DVmdCokJ.js";import{s as p}from"./DLg2SwNZ.js";var m=d('<div class="shadow-md svelte-14lhd4r"><!></div>');function c(a,s){var r=m(),o=e(r);p(o,()=>s.children),i(r),t(a,r)}export{c as C};

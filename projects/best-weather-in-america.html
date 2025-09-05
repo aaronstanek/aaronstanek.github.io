@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://aaronstanek.com/static-web-content/fonts/noto-sans.css" />
+		<meta name="language" content="en" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.BDHeZZF8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/anchor.THenw_BX.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/hidden.Ca8PLjKJ.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.Cv-fELuH.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/URacGDI0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/nV-4aG2w.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DVmdCokJ.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.JsmOCrgd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/D1rJHNN0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/IJMoEVRx.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CJVv8vLi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/B5Nunh1s.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.DIJfgfhW.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DLg2SwNZ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CqQZoR6b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DrOXcJQ-.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.CfJVdqgs.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Dp8kRQl_.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C2YnBynH.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DOQqt08K.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Gc-VDlzX.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BDMEyPIU.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CqbZHWF5.js"><!--[--><!--[--><link rel="canonical" href="https://aaronstanek.com/projects/best-weather-in-america"><!--]--> <!--[--><!--]--> <!--[--><meta name="description" content="Discover the current best weather in the United States! This real-time tracker reveals the top outdoor conditions nationwide—perfect for travel planning, road trips, or a spontaneous weekend getaway."><!--]--> <script type="application/ld+json"></script><!--]--><title>Best Weather in America</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><div class="flex flex-col h-screen justify-between"><div><div class="flex justify-between navbar min-[480px]:sticky min-[480px]:top-0  svelte-1y50ho1"><!--[--><div class="link-like svelte-1y50ho1">Aaron Stanek</div><!--]--> <div class="flex flex-wrap justify-between"><a class="hide-on-modile svelte-1y50ho1" target="_top" href="https://github.com/aaronstanek">GitHub</a> <a class="hide-on-modile svelte-1y50ho1" target="_top" href="https://www.linkedin.com/in/amstanek/">LinkedIn</a> <a target="_top" href="/contact" class="svelte-1y50ho1">Contact</a></div></div><!----> <div class="golden svelte-xtstca"><!----><!----> <h1 class="text-center">The best weather in America is currently in<br>?, ?.</h1> <div class="micro svelte-x9pcw5"><div class="shift svelte-x9pcw5"><a id="current-conditions" class="svelte-a4pcdw"><h2 class="text-center">Current Conditions</h2><!----></a><!----></div></div><!----> <div class="text-center mt-6">The temperature is ? with ? humidity,
+	? wind, and ? chance of precipitation.</div> <iframe style="width:100%; height:400px" class="mt-6" title="Map"></iframe> <div class="text-center mt-6">This information was last updated at ? Eastern Time. This
+	page updates automatically as new information becomes available.</div> <h3 class="mt-6">Table of Contents</h3> <div class="mt-1">1. <a href="#current-conditions" target="_top" class="link"><!---->Current Conditions<!----></a><!----><br> 2. <a href="#what-is-this" target="_top" class="link"><!---->What is this?<!----></a><!----><br> 3. <a href="#historical-conditions" target="_top" class="link"><!---->Historical Conditions<!----></a><!----></div> <a id="what-is-this" class="svelte-a4pcdw"><h2 class="mt-6">What is this?</h2><!----></a><!----> <div class="mt-6">With most weather apps, you enter a location and the app tells you the weather at that location.
+	This app does the opposite: it tells you a location where the weather is good.</div> <div class="mt-6">This app considers the best outdoor weather to be the following:<br> - 70°F<br> - 50% relative humidity<br> - 5 mph wind<br> - 0% chance of precipitation</div> <div class="mt-6">Deciding what "best" means in terms of weather is actually quite difficult. Weather preferences
+	vary from person to person, but there are some consistent patterns. 20°C (68°F)
+	is used as the standard for "room temperature". This is the temperature at which the greatest
+	number of people feel comfortable indoors.</div> <div class="mt-6">Outdoor temperature is slightly more complicated due to factors such as sunlight and wind. People
+	like having a slight breeze when outdoors; stagnant air outdoors makes people feel uncomfortable.
+	Accounting for this, this project picks an ideal temperature that is slightly higher than room
+	temperature to account for wind chill. This allows for outdoor recreation without overheating, but
+	doesn't necessitate a sweater or physical movement to stay warm. Preferences for humidity and
+	precipitation are more consistent across the population, 50% and 0 respectively.</div> <div class="mt-6">Behind the scenes, this app queries the <a href="https://www.weather.gov/" target="_top" class="link"><!---->US National Weather Service<!----></a><!----> for information about current weather conditions throughout the United States. To maximize performance,
+	this app uses a lower spatial resolution than the National Weather Service. This means that the city
+	that actually has the best weather at any given time might be several miles away from the city that
+	this app claims to have the best weather.</div> <a id="historical-conditions" class="svelte-a4pcdw"><h2 class="mt-6">Historical Conditions</h2><!----></a><!----> <div class="mt-3">The following is a list of cities that had the best weather in America at some point in the last
+	24 hours. Times are listed in US Eastern Time.</div> <div class="flex flex-col gap-6 mt-6"><!--[--><!--]--></div><!----><!----></div></div> <div class="text-center copyright svelte-bex1d0">© Aaron Stanek</div><!----></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1lryntf = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.Cv-fELuH.js"),
+						import("../_app/immutable/entry/app.JsmOCrgd.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
