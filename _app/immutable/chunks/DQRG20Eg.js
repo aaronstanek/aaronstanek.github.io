@@ -1,0 +1,1 @@
+import{a as s,t as o}from"./BkYB-9iT.js";import{t as i,c as m,r as p}from"./D97hXAhP.js";import{s as f}from"./BLbkH4Am.js";import{s as n}from"./Cmq7Bzn9.js";var c=o('<a target="_top" class="link"><!></a>');function _(r,a){var t=c(),e=m(t);f(e,()=>a.children),p(t),i(()=>n(t,"href",a.href)),s(r,t)}export{_ as L};
